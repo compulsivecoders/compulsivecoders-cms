@@ -2,6 +2,16 @@
     "server": {
         "host": "0.0.0.0"
     },
+    "mail": {
+        "transport": "SMTP",
+        "options": {
+            "service": "Mailgun",
+            "auth": {
+                "user": "",
+                "pass": ""
+            }
+        }
+    },
     "database": {
         "client": "mysql",
         "connection": {
