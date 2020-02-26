@@ -48,16 +48,19 @@ _private.loadNconf = function loadNconf(options) {
 
     nconf.sanitizeDatabaseProperties();
     nconf.makePathsAbsolute(nconf.get('paths'), 'paths');
-    if (nconf.get('database:client') === 'sqlite3') {
+    /*if (nconf.get('database:client') === 'sqlite3') {
         nconf.makePathsAbsolute(nconf.get('database:connection'), 'database:connection');
-    }
+    }*/
+
 
     if (env === 'production') {
+        console.log(env)
         nconf.set('database:user', process.env.DATABASE_USER);
         nconf.set('database:password', process.env.DATABASE_PASSWORD);
         nconf.set('database:host', process.env.DATABASE_HOST);
         nconf.set('database:database', process.env.DATABASE_DATABASE);
     }
+    console.log(nconf.get('database:user'));
     /**
      * Check if the URL in config has a protocol
      */
