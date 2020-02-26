@@ -1,6 +1,6 @@
 {
     "database": {
-        "client": "postgresql",
+        "client": "mysql",
         "connection": {
             "host"     : "",
             "user"     : "",
