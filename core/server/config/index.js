@@ -53,7 +53,10 @@ _private.loadNconf = function loadNconf(options) {
     }
 
     if (env === 'production') {
+        nconf.set('database:user', process.env.DATABASE_USER);
         nconf.set('database:password', process.env.DATABASE_PASSWORD);
+        nconf.set('database:host', process.env.DATABASE_HOST);
+        nconf.set('database:database', process.env.DATABASE_DATABASE);
     }
     /**
      * Check if the URL in config has a protocol
