@@ -8,7 +8,6 @@
             "service": "Mailgun",
             "host": "",
             "port": "",
-            "secureConnection": true,
             "auth": {
                 "user": "",
                 "pass": ""
