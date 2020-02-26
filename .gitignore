@@ -1,3 +1,4 @@
 .ghost-cli
 .idea
 node_modules/
+content/logs
