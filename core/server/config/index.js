@@ -59,6 +59,7 @@ _private.loadNconf = function loadNconf(options) {
         nconf.set('database:connection:host', process.env.DATABASE_HOST);
         nconf.set('database:connection:database', process.env.DATABASE_DATABASE);
         nconf.set('server:port', process.env.PORT);
+        nconf.set('url', 'http://localhost:' + process.env.PORT);
     }
     /**
      * Check if the URL in config has a protocol
