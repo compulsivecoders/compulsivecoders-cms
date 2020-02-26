@@ -51,6 +51,10 @@ _private.loadNconf = function loadNconf(options) {
     if (nconf.get('database:client') === 'sqlite3') {
         nconf.makePathsAbsolute(nconf.get('database:connection'), 'database:connection');
     }
+
+    if (env === 'production') {
+        nconf.set('database:password', process.env.DATABASE_PASSWORD);
+    }
     /**
      * Check if the URL in config has a protocol
      */
