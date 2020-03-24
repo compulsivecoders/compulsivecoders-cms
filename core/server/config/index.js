@@ -52,7 +52,6 @@ _private.loadNconf = function loadNconf(options) {
         nconf.makePathsAbsolute(nconf.get('database:connection'), 'database:connection');
     }
 
-    console.log(env)
     if (env === 'production') {
         nconf.set('database:connection:user', process.env.DATABASE_USER);
         nconf.set('database:connection:password', process.env.DATABASE_PASSWORD);

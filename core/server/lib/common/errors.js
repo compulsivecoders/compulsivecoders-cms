@@ -6,7 +6,6 @@ const merge = require('lodash/merge'),
 function GhostError(options) {
     options = options || {};
     this.value = options.value;
-
     errors.IgnitionError.call(this, options);
 }
 

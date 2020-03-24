@@ -15,6 +15,9 @@
             }
         }
     },
+    "storage": {
+        "active": "s3"
+    },
     "database": {
         "client": "mysql",
         "connection": {
